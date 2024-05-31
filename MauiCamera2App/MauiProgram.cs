@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using MauiCamera2App.Platforms.Android;
+using Microsoft.Extensions.Logging;
 
 namespace MauiCamera2App
 {
@@ -9,6 +10,10 @@ namespace MauiCamera2App
             var builder = MauiApp.CreateBuilder();
             builder
                 .UseMauiApp<App>()
+                .ConfigureMauiHandlers(handlers =>
+                {
+                    handlers.AddHandler(typeof(CameraPreview), typeof(CameraPreviewHandler));
+                })
                 .ConfigureFonts(fonts =>
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
