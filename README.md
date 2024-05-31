@@ -1,7 +1,3 @@
-Sure, here's a README for your GitHub repository:
-
----
-
 # MauiCamera2App
 
 This repository contains a sample application demonstrating the use of the Camera2 API in .NET MAUI. It is based on the original work from the [Xam-Android-Camera2-Sample](https://github.com/UNIT-23/Xam-Android-Camera2-Sample) repository and has been adapted to work with .NET MAUI.
