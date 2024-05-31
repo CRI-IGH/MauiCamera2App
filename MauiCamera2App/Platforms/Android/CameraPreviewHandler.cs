@@ -4,6 +4,7 @@ using Microsoft.Maui.Handlers;
 using Microsoft.Maui.Platform;
 using Android.Widget; // Hinzugefügt für SurfaceView
 using AndroidX.Fragment.App; // Hinzugefügt für Fragment
+using View = Android.Views.View;
 
 namespace MauiCamera2App.Platforms.Android
 {
@@ -22,8 +23,9 @@ namespace MauiCamera2App.Platforms.Android
         {
             var context = MauiApplication.Current.ApplicationContext;
             var frameLayout = new FrameLayout(context);
+            frameLayout.Id = View.GenerateViewId();
 
-            var fragmentManager = (context as Android.App.Activity).FragmentManager;
+            var fragmentManager = ((MainActivity)Context).SupportFragmentManager;
             var camera2Fragment = new Camera2Fragment();
             var transaction = fragmentManager.BeginTransaction();
             transaction.Replace(frameLayout.Id, camera2Fragment);
