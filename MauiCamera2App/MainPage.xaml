@@ -5,8 +5,8 @@
              x:Class="MauiCamera2App.MainPage">
 
 
-    <Grid>
-        <local:CameraPreview x:Name="cameraPreview"/>
-    </Grid>
+    <ContentView x:Name="cameraView" 
+                 VerticalOptions="FillAndExpand" 
+                 HorizontalOptions="FillAndExpand" />
 
 </ContentPage>

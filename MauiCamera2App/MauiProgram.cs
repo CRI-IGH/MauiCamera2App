@@ -12,7 +12,7 @@ namespace MauiCamera2App
                 .UseMauiApp<App>()
                 .ConfigureMauiHandlers(handlers =>
                 {
-                    handlers.AddHandler(typeof(CameraPreview), typeof(CameraPreviewHandler));
+                    handlers.AddHandler(typeof(CustomCameraPreview), typeof(CustomCameraPreviewHandler));
                 })
                 .ConfigureFonts(fonts =>
                 {
